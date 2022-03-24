@@ -3,8 +3,21 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Katie R",
-  "email": "katie@email.com",
+  "name": "testtesttest",
+  "email": "testtesttest@email.com",
   "password": "password",
   "password_confirmation": "password"
+}
+
+### users index
+GET http://localhost:3000/users.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxOTU2NDR9.bpyvC0QWM8up9VLNZyFwELFUGHDFOigNHy5OFIHXPVA
+
+### sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "katie@email.com",
+  "password": "password"
 }

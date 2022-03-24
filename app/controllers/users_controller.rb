@@ -1,5 +1,14 @@
 class UsersController < ApplicationController
   
+  def index
+    users = User.all 
+    if current_user
+      render json: users.as_json
+    else
+      render json: {}, status: :unauthorized 
+    end
+  end
+
   def create
     user = User.new(
       name: params[:name],
